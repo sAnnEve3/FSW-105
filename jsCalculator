@@ -1,0 +1,37 @@
+const readline = require("readline-sync");
+function calculator() {
+   // addition
+    function addNumbers(num1, num2){    
+    var num1 = Number(readlineSync.questionInt("Please enter your first number"));
+    var num2 = Number(readlineSync.questionInt("Please enter your second number"));
+        return (num1 + num2);
+    }
+    // multipying
+    function multiplyNumbers(num1, num2){
+    var num1 = Number(readlineSync.questionInt("Please enter your first number"));
+    var num2 = Number(readlineSync.questionInt("Please enter your second number"));
+        return console.log(num1 * num2);
+    }
+    //division
+    function divideNumbers(num1, num2){
+    var num1 = Number(readlineSync.questionInt("Please enter your first number"));
+    var num2 = Number(readlineSync.questionInt("Please enter your second number"));
+        return console.log(num1/num2);
+    }
+    //subtraction
+    function subtractNumbers(num1, num2){
+        var num1 = Number(readlineSync.questionInt("Please enter your first number"));
+        var num2 = Number(readlineSync.questionInt("Please enter your second number"));
+        return console.log(num1 - num2);
+    }
+    // operation 
+    function chooseOperation(){
+    var operation = readlineSync.questionInt("Please enter the operation to perform: add, sub, mult, div");
+    return (operation == "add" ? addNumbers() :
+            operation == "sub" ? subtractNumbers() :
+            operation == "mult" ? multiplyNumbers() :
+            operation == "div" ? divideNumbers() :
+        console.log("Please check your input"));
+    }
+}
+console.log("The result is: " + calculator);
